@@ -1,0 +1,316 @@
+{
+  "dataset_meta": {
+    "purpose": "Seed data for GrantReady Phase 1 RAG matching engine",
+    "compiled_date": "2026-07-06",
+    "note": "All figures verified against official Alberta.ca / AAFC / AFSC / RDAR sources as of compile date. Programs change frequently -- treat 'last_verified' as a freshness field the crawler should overwrite, not a permanent value. Flagged items require live re-verification before showing hard deadlines to farmers.",
+    "programs_count": 13
+  },
+  "programs": [
+    {
+      "id": "ofep",
+      "name": "On-Farm Efficiency Program",
+      "acronym": "OFEP",
+      "tier": "provincial",
+      "agency": "Government of Alberta (delivered under Sustainable CAP)",
+      "type": "cost-share grant, reimbursement-based",
+      "funding_amount": {
+        "max_per_applicant": 150000,
+        "cost_share_rate": "up to 50% of eligible expenses",
+        "min_funding": 500,
+        "program_term": "2024-2028"
+      },
+      "eligible_use": "Smart farm technology, energy efficiency, farm security, efficient grain handling",
+      "eligibility": {
+        "min_annual_farm_commodities": 25000,
+        "location": "Alberta",
+        "requires_efp": true,
+        "applicant_type": "Primary producer responsible for day-to-day operation"
+      },
+      "intake": "Continuous, case-by-case review; limited funding pool -- not guaranteed",
+      "deadline": "No fixed deadline; expenses before April 1, 2023 ineligible",
+      "required_documents": ["Environmental Farm Plan (EFP) certificate", "Application form", "Invoices matching applicant legal name", "Proof of payment"],
+      "source_url": "https://www.alberta.ca/on-farm-efficiency-program",
+      "last_verified": "2026-07-06"
+    },
+    {
+      "id": "ofcaf",
+      "name": "On-Farm Climate Action Fund",
+      "acronym": "OFCAF",
+      "tier": "federal (delivered provincially via RDAR in Alberta)",
+      "agency": "Agriculture and Agri-Food Canada / RDAR (delivery partner)",
+      "type": "cost-share grant, reimbursement-based",
+      "funding_amount": {
+        "max_per_applicant": 100000,
+        "note_on_amount": "Increased from $75,000 to $100,000 for 2026 intake per industry bulletin; nitrogen management sub-cap remains $20,000 per operation over 2022-2028",
+        "cost_share_rate": "up to 85% of eligible cash expenditures",
+        "min_project_cost": 2500,
+        "program_term": "April 1, 2022 - March 31, 2028"
+      },
+      "eligible_use": "Nitrogen management, cover cropping, rotational grazing (incl. new virtual fencing category), related outreach/education/training",
+      "eligibility": {
+        "min_gross_farm_income": 25000,
+        "location": "Alberta (also available BC, SK, QC)",
+        "requires_efp": false,
+        "requires_bmp_action_plan": "Yes -- must be developed with a Professional Agrologist (PAg) or Certified Crop Advisor (CCA)",
+        "applicant_type": "Active producer -- proprietorship, corporation, or registered partnership; landlords with land-only interest are ineligible"
+      },
+      "intake": "First-come, first-served until funding committed",
+      "deadline": "FLAG: conflicting status found -- RDAR's own funding-opportunities index currently lists OFCAF as 'Closed', while an April 17, 2026 industry bulletin states it is open with the updated cap. VERIFY LIVE at rdar.ca before showing this as open to a farmer.",
+      "required_documents": ["BMP Action Plan (PAg/CCA-approved)", "Labelled field boundary maps", "Invoices", "Proof of 100% upfront payment"],
+      "source_url": "https://rdar.ca/funding-opportunities/ofcaf",
+      "last_verified": "2026-07-06"
+    },
+    {
+      "id": "on-farm-value-added",
+      "name": "On-Farm Value-Added Program",
+      "acronym": null,
+      "tier": "provincial",
+      "agency": "Government of Alberta (Sustainable CAP)",
+      "type": "cost-share grant, reimbursement-based",
+      "funding_amount": {
+        "stream_a_max": 50000,
+        "stream_b_range": "50001 to 250000",
+        "cost_share_capital": "25% grant / 75% applicant",
+        "cost_share_noncapital": "50% grant / 50% applicant, capped at $50,000 (incl. $5,000 max travel)"
+      },
+      "eligible_use": "Processing capacity expansion, new product/process development, market development and access",
+      "eligibility": {
+        "min_annual_commercial_production": 25000,
+        "location": "Alberta",
+        "applicant_type": "Individual, corporation, partnership, or co-operative adding value past harvest or slaughter",
+        "excludes": "Landlords whose only interest is land ownership"
+      },
+      "intake": "Once per program fiscal year (April 1 - March 31)",
+      "deadline": "Submit within 90 calendar days of project start date",
+      "required_documents": ["Application form (original wet signature required)", "Supporting documents per Funding List"],
+      "source_url": "https://www.alberta.ca/on-farm-value-added-program",
+      "last_verified": "2026-07-06"
+    },
+    {
+      "id": "agristability",
+      "name": "AgriStability",
+      "acronym": null,
+      "tier": "federal/provincial (delivered by AFSC in Alberta)",
+      "agency": "AFSC / Agriculture and Agri-Food Canada",
+      "type": "whole-farm income insurance (not a project grant)",
+      "funding_amount": {
+        "compensation_rate": "80% of margin loss (raised from 70% in the 2023 FPT agreement)",
+        "trigger": "Production margin falls below 70% of historical Olympic-average reference margin",
+        "max_payment": "up to $3,000,000",
+        "admin_fee": "$55 cost-share fee for new/rejoining participants"
+      },
+      "eligible_use": "Income protection against margin decline from market crashes, weather, disease, trade disruption",
+      "eligibility": {
+        "applicant_type": "Anyone farming in Canada earning income from primary agricultural production",
+        "requires_tax_filing": "Must report farming income/loss to CRA"
+      },
+      "intake": "Annual enrollment cycle",
+      "deadline": "April 30, 2026 to enroll for the 2026 program year (no late applications). Fee payment due by July 31 without penalty, December 31 final with 20% penalty.",
+      "required_documents": ["Enrolment Notice / Fee Notice Election Form", "CRA tax filings for reference years"],
+      "source_url": "https://afsc.ca/income-stabilization/agristability/new-to-agristability/",
+      "last_verified": "2026-07-06"
+    },
+    {
+      "id": "agriinvest",
+      "name": "AgriInvest",
+      "acronym": null,
+      "tier": "federal/provincial",
+      "agency": "AFSC / Agriculture and Agri-Food Canada",
+      "type": "matched savings account",
+      "funding_amount": {
+        "match_rate": "Government matches 1% of allowable net sales",
+        "example": "$500,000 net sales -> $5,000/year government match",
+        "withdrawal": "Any time, for any farming purpose, no application or approval needed"
+      },
+      "eligible_use": "General farm risk management, withdrawn at producer's discretion",
+      "eligibility": {
+        "applicant_type": "Active Canadian producers filing farm income for tax purposes"
+      },
+      "intake": "Tied to annual tax filing, no separate application",
+      "deadline": "Aligned with AgriStability/tax filing deadlines (June 30 initial, penalty deadlines follow)",
+      "required_documents": ["CRA tax filing"],
+      "source_url": "https://afsc.ca",
+      "last_verified": "2026-07-06"
+    },
+    {
+      "id": "emerging-opportunities",
+      "name": "Emerging Opportunities Program",
+      "acronym": null,
+      "tier": "provincial",
+      "agency": "Government of Alberta (Sustainable CAP)",
+      "type": "cost-share grant, invite-only intake",
+      "funding_amount": {
+        "max_per_fiscal_year": 1000000,
+        "max_project": 2000000,
+        "cost_share_capital": "25% grant / 75% applicant",
+        "cost_share_noncapital": "50% grant / 50% applicant"
+      },
+      "eligible_use": "New processing facilities, significant capacity expansion, export/market access initiatives, sector collaboration",
+      "eligibility": {
+        "min_project_investment": 2000000,
+        "applicant_type": "Agriculture or bio-industrial PROCESSOR, or industry organization -- NOT typically primary producers/farms",
+        "location": "Alberta"
+      },
+      "intake": "Invite-only: contact program directly, then wait for invitation to submit a letter of request",
+      "deadline": "No fixed deadline; relationship-driven intake",
+      "flag": "MISMATCH WITH PRODUCT DOC: GrantReady's own product doc lists this at up to $250,000/applicant -- current official terms are up to $1M/yr, $2M project cap, and require $2M+ minimum investment. This program is a poor match for GrantReady's primary target user (typical $25K+ primary producer) and should probably be filtered OUT of default matching results for that persona, or shown only to processor-scale operations.",
+      "required_documents": ["Letter of request (by invitation only)"],
+      "source_url": "https://www.alberta.ca/emerging-opportunities-program",
+      "last_verified": "2026-07-06"
+    },
+    {
+      "id": "ralp",
+      "name": "Resilient Agricultural Landscape Program",
+      "acronym": "RALP",
+      "tier": "provincial",
+      "agency": "Government of Alberta / RDAR",
+      "type": "per-acre payment",
+      "funding_amount": {
+        "structure": "Per-acre payment over a 3-year term"
+      },
+      "eligible_use": "Beneficial Management Practices that maximize Ecological Goods & Services -- carbon sequestration, climate resilience",
+      "eligibility": {
+        "min_annual_farm_commodities": 25000,
+        "requires_efp": true,
+        "location": "Alberta"
+      },
+      "intake": "Check current intake window -- varies",
+      "deadline": "Verify live -- not confirmed in this pass",
+      "required_documents": ["Environmental Farm Plan"],
+      "source_url": "https://www.alberta.ca/resilient-agricultural-landscape-program",
+      "last_verified": "2026-07-06"
+    },
+    {
+      "id": "water-program",
+      "name": "Water Program (On-Farm Irrigation & On-Farm Water Supply streams)",
+      "acronym": null,
+      "tier": "provincial",
+      "agency": "Government of Alberta (Sustainable CAP)",
+      "type": "cost-share grant",
+      "funding_amount": {
+        "note": "Grant maximums adjusted upward in 2024 update to offset rising project costs -- verify current cap live"
+      },
+      "eligible_use": "On-farm irrigation systems, water supply infrastructure (dugouts, dams, spring developments)",
+      "eligibility": {
+        "min_annual_farm_commodities": 25000,
+        "location": "Alberta",
+        "special_requirement": "Dugouts/dams/spring developments require prior consultation with an Agriculture and Irrigation Water Specialist and an approved Construction Sheet"
+      },
+      "intake": "Two streams, can apply to one or both",
+      "deadline": "Verify live",
+      "required_documents": ["Approved Construction Sheet (for water supply stream)", "Application form"],
+      "source_url": "https://www.alberta.ca/water-program",
+      "last_verified": "2026-07-06"
+    },
+    {
+      "id": "growing-greenhouses",
+      "name": "Growing Greenhouses Program",
+      "acronym": null,
+      "tier": "provincial",
+      "agency": "Government of Alberta (Sustainable CAP)",
+      "type": "cost-share grant",
+      "funding_amount": {
+        "note": "Supports growth of controlled environment agriculture (CEA) -- verify current cap live"
+      },
+      "eligible_use": "Controlled environment agriculture / greenhouse production and infrastructure to increase local access to fruits and vegetables year-round",
+      "eligibility": {
+        "location": "Alberta",
+        "applicant_type": "CEA producers/operations"
+      },
+      "intake": "Verify live",
+      "deadline": "Verify live",
+      "required_documents": ["Application form -- verify list live"],
+      "source_url": "https://www.alberta.ca/growing-greenhouses-program",
+      "last_verified": "2026-07-06"
+    },
+    {
+      "id": "alberta-indigenous-ag-funding",
+      "name": "Alberta Indigenous Agricultural Funding",
+      "acronym": null,
+      "tier": "provincial",
+      "agency": "Government of Alberta",
+      "type": "cost-share / non-repayable grant",
+      "funding_amount": {
+        "min": 2000,
+        "max_primary_producer": 150000,
+        "max_community_project": 300000
+      },
+      "eligible_use": "Range of agricultural projects; multi-year support possible",
+      "eligibility": {
+        "min_annual_farm_commodities": 25000,
+        "requires_efp": true,
+        "applicant_type": "Indigenous producers, organizations, and grazing associations"
+      },
+      "intake": "Verify live",
+      "deadline": "Verify live",
+      "required_documents": ["Environmental Farm Plan"],
+      "source_url": "https://www.alberta.ca",
+      "last_verified": "2026-07-06"
+    },
+    {
+      "id": "alberta-young-farmer-grants",
+      "name": "Alberta Young Farmer Grants",
+      "acronym": null,
+      "tier": "provincial",
+      "agency": "Government of Alberta / partner delivery",
+      "type": "grant",
+      "funding_amount": {
+        "max": 75000
+      },
+      "eligible_use": "Farm business plan development and implementation for new/young entrants",
+      "eligibility": {
+        "applicant_type": "Under 40 or new entrants with a qualifying farm business plan",
+        "location": "Alberta"
+      },
+      "intake": "Verify live -- source did not confirm intake mechanics",
+      "deadline": "Verify live",
+      "required_documents": ["Farm business plan"],
+      "source_url": "https://www.localline.co/blog/farm-grants-in-canada",
+      "last_verified": "2026-07-06",
+      "flag": "Secondary-source only -- confirm details against an Alberta.ca or AFSC primary source before publishing to users."
+    },
+    {
+      "id": "women-in-ag-grant",
+      "name": "Women in Ag Grant",
+      "acronym": null,
+      "tier": "provincial (private/credit union sponsored)",
+      "agency": "Credit Unions of Alberta",
+      "type": "grant",
+      "funding_amount": {
+        "amount_each": 10000,
+        "number_awarded_annually": 2
+      },
+      "eligible_use": "General support for women working in Alberta agriculture",
+      "eligibility": {
+        "applicant_type": "Women, legal residents of Alberta, age 18+, working or planning to work in agriculture"
+      },
+      "intake": "Annual award cycle",
+      "deadline": "Verify live",
+      "required_documents": ["Application per Credit Unions of Alberta"],
+      "source_url": "https://www.localline.co/blog/farm-grants-in-canada",
+      "last_verified": "2026-07-06",
+      "flag": "Secondary-source only -- confirm against Credit Unions of Alberta primary source."
+    },
+    {
+      "id": "alberta-farm-fuel-benefit",
+      "name": "Alberta Farm Fuel Benefit",
+      "acronym": null,
+      "tier": "provincial",
+      "agency": "Government of Alberta",
+      "type": "fuel tax rebate program",
+      "funding_amount": {
+        "note": "Marked-fuel/tax-benefit structure rather than a project grant -- verify current rate and mechanics live"
+      },
+      "eligible_use": "Reduced-cost fuel for eligible farm use",
+      "eligibility": {
+        "applicant_type": "Registered Alberta farm operations",
+        "location": "Alberta"
+      },
+      "intake": "Ongoing program, not project-based",
+      "deadline": "N/A -- ongoing",
+      "required_documents": ["Farm Fuel Benefit registration"],
+      "source_url": "https://www.alberta.ca",
+      "last_verified": "2026-07-06"
+    }
+  ]
+}
