@@ -46,3 +46,4 @@ Then open http://localhost:5173
 - `GET /api/health` — status + program count
 - `GET /api/programs` — raw seed programs
 - `POST /api/match` — questionnaire answers → tiered matches (see `app/models.py`)
+# grant-ready
