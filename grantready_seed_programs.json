@@ -28,9 +28,26 @@
       },
       "intake": "Continuous, case-by-case review; limited funding pool -- not guaranteed",
       "deadline": "No fixed deadline; expenses before April 1, 2023 ineligible",
-      "required_documents": ["Environmental Farm Plan (EFP) certificate", "Application form", "Invoices matching applicant legal name", "Proof of payment"],
+      "required_documents": [
+        "Environmental Farm Plan (EFP) certificate",
+        "Application form",
+        "Invoices matching applicant legal name",
+        "Proof of payment"
+      ],
       "source_url": "https://www.alberta.ca/on-farm-efficiency-program",
-      "last_verified": "2026-07-06"
+      "last_verified": "2026-07-06",
+      "confidence_tier": "verified",
+      "last_crawled": "2026-07-09T23:02:25+00:00",
+      "last_human_verified": "2026-07-06",
+      "change_log": [
+        {
+          "timestamp": "2026-07-09T23:01:26+00:00",
+          "field": "page_content",
+          "old_value": "content hash deadbeef_simulat",
+          "new_value": "content hash b6fae8de076a46c2 — content changed, review manually",
+          "status": "rejected"
+        }
+      ]
     },
     {
       "id": "ofcaf",
@@ -56,9 +73,18 @@
       },
       "intake": "First-come, first-served until funding committed",
       "deadline": "FLAG: conflicting status found -- RDAR's own funding-opportunities index currently lists OFCAF as 'Closed', while an April 17, 2026 industry bulletin states it is open with the updated cap. VERIFY LIVE at rdar.ca before showing this as open to a farmer.",
-      "required_documents": ["BMP Action Plan (PAg/CCA-approved)", "Labelled field boundary maps", "Invoices", "Proof of 100% upfront payment"],
+      "required_documents": [
+        "BMP Action Plan (PAg/CCA-approved)",
+        "Labelled field boundary maps",
+        "Invoices",
+        "Proof of 100% upfront payment"
+      ],
       "source_url": "https://rdar.ca/funding-opportunities/ofcaf",
-      "last_verified": "2026-07-06"
+      "last_verified": "2026-07-06",
+      "confidence_tier": "flagged",
+      "last_crawled": "2026-07-09T23:02:26+00:00",
+      "last_human_verified": "2026-07-06",
+      "change_log": []
     },
     {
       "id": "on-farm-value-added",
@@ -82,9 +108,16 @@
       },
       "intake": "Once per program fiscal year (April 1 - March 31)",
       "deadline": "Submit within 90 calendar days of project start date",
-      "required_documents": ["Application form (original wet signature required)", "Supporting documents per Funding List"],
+      "required_documents": [
+        "Application form (original wet signature required)",
+        "Supporting documents per Funding List"
+      ],
       "source_url": "https://www.alberta.ca/on-farm-value-added-program",
-      "last_verified": "2026-07-06"
+      "last_verified": "2026-07-06",
+      "confidence_tier": "verified",
+      "last_crawled": "2026-07-09T23:02:27+00:00",
+      "last_human_verified": "2026-07-06",
+      "change_log": []
     },
     {
       "id": "agristability",
@@ -106,9 +139,16 @@
       },
       "intake": "Annual enrollment cycle",
       "deadline": "April 30, 2026 to enroll for the 2026 program year (no late applications). Fee payment due by July 31 without penalty, December 31 final with 20% penalty.",
-      "required_documents": ["Enrolment Notice / Fee Notice Election Form", "CRA tax filings for reference years"],
+      "required_documents": [
+        "Enrolment Notice / Fee Notice Election Form",
+        "CRA tax filings for reference years"
+      ],
       "source_url": "https://afsc.ca/income-stabilization/agristability/new-to-agristability/",
-      "last_verified": "2026-07-06"
+      "last_verified": "2026-07-06",
+      "confidence_tier": "verified",
+      "last_crawled": "2026-07-09T23:02:27+00:00",
+      "last_human_verified": "2026-07-06",
+      "change_log": []
     },
     {
       "id": "agriinvest",
@@ -128,9 +168,15 @@
       },
       "intake": "Tied to annual tax filing, no separate application",
       "deadline": "Aligned with AgriStability/tax filing deadlines (June 30 initial, penalty deadlines follow)",
-      "required_documents": ["CRA tax filing"],
+      "required_documents": [
+        "CRA tax filing"
+      ],
       "source_url": "https://afsc.ca",
-      "last_verified": "2026-07-06"
+      "last_verified": "2026-07-06",
+      "confidence_tier": "verified",
+      "last_crawled": "2026-07-09T23:02:27+00:00",
+      "last_human_verified": "2026-07-06",
+      "change_log": []
     },
     {
       "id": "emerging-opportunities",
@@ -154,9 +200,15 @@
       "intake": "Invite-only: contact program directly, then wait for invitation to submit a letter of request",
       "deadline": "No fixed deadline; relationship-driven intake",
       "flag": "MISMATCH WITH PRODUCT DOC: GrantReady's own product doc lists this at up to $250,000/applicant -- current official terms are up to $1M/yr, $2M project cap, and require $2M+ minimum investment. This program is a poor match for GrantReady's primary target user (typical $25K+ primary producer) and should probably be filtered OUT of default matching results for that persona, or shown only to processor-scale operations.",
-      "required_documents": ["Letter of request (by invitation only)"],
+      "required_documents": [
+        "Letter of request (by invitation only)"
+      ],
       "source_url": "https://www.alberta.ca/emerging-opportunities-program",
-      "last_verified": "2026-07-06"
+      "last_verified": "2026-07-06",
+      "confidence_tier": "flagged",
+      "last_crawled": "2026-07-09T23:02:28+00:00",
+      "last_human_verified": "2026-07-06",
+      "change_log": []
     },
     {
       "id": "ralp",
@@ -176,9 +228,15 @@
       },
       "intake": "Check current intake window -- varies",
       "deadline": "Verify live -- not confirmed in this pass",
-      "required_documents": ["Environmental Farm Plan"],
+      "required_documents": [
+        "Environmental Farm Plan"
+      ],
       "source_url": "https://www.alberta.ca/resilient-agricultural-landscape-program",
-      "last_verified": "2026-07-06"
+      "last_verified": "2026-07-06",
+      "confidence_tier": "verified",
+      "last_crawled": "2026-07-09T23:02:28+00:00",
+      "last_human_verified": "2026-07-06",
+      "change_log": []
     },
     {
       "id": "water-program",
@@ -198,9 +256,16 @@
       },
       "intake": "Two streams, can apply to one or both",
       "deadline": "Verify live",
-      "required_documents": ["Approved Construction Sheet (for water supply stream)", "Application form"],
+      "required_documents": [
+        "Approved Construction Sheet (for water supply stream)",
+        "Application form"
+      ],
       "source_url": "https://www.alberta.ca/water-program",
-      "last_verified": "2026-07-06"
+      "last_verified": "2026-07-06",
+      "confidence_tier": "verified",
+      "last_crawled": "2026-07-09T23:02:28+00:00",
+      "last_human_verified": "2026-07-06",
+      "change_log": []
     },
     {
       "id": "growing-greenhouses",
@@ -219,9 +284,15 @@
       },
       "intake": "Verify live",
       "deadline": "Verify live",
-      "required_documents": ["Application form -- verify list live"],
+      "required_documents": [
+        "Application form -- verify list live"
+      ],
       "source_url": "https://www.alberta.ca/growing-greenhouses-program",
-      "last_verified": "2026-07-06"
+      "last_verified": "2026-07-06",
+      "confidence_tier": "verified",
+      "last_crawled": "2026-07-09T23:02:28+00:00",
+      "last_human_verified": "2026-07-06",
+      "change_log": []
     },
     {
       "id": "alberta-indigenous-ag-funding",
@@ -243,9 +314,15 @@
       },
       "intake": "Verify live",
       "deadline": "Verify live",
-      "required_documents": ["Environmental Farm Plan"],
+      "required_documents": [
+        "Environmental Farm Plan"
+      ],
       "source_url": "https://www.alberta.ca",
-      "last_verified": "2026-07-06"
+      "last_verified": "2026-07-06",
+      "confidence_tier": "verified",
+      "last_crawled": "2026-07-09T23:02:28+00:00",
+      "last_human_verified": "2026-07-06",
+      "change_log": []
     },
     {
       "id": "alberta-young-farmer-grants",
@@ -264,10 +341,16 @@
       },
       "intake": "Verify live -- source did not confirm intake mechanics",
       "deadline": "Verify live",
-      "required_documents": ["Farm business plan"],
+      "required_documents": [
+        "Farm business plan"
+      ],
       "source_url": "https://www.localline.co/blog/farm-grants-in-canada",
       "last_verified": "2026-07-06",
-      "flag": "Secondary-source only -- confirm details against an Alberta.ca or AFSC primary source before publishing to users."
+      "flag": "Secondary-source only -- confirm details against an Alberta.ca or AFSC primary source before publishing to users.",
+      "confidence_tier": "flagged",
+      "last_crawled": "2026-07-09T23:02:28+00:00",
+      "last_human_verified": "2026-07-06",
+      "change_log": []
     },
     {
       "id": "women-in-ag-grant",
@@ -286,10 +369,16 @@
       },
       "intake": "Annual award cycle",
       "deadline": "Verify live",
-      "required_documents": ["Application per Credit Unions of Alberta"],
+      "required_documents": [
+        "Application per Credit Unions of Alberta"
+      ],
       "source_url": "https://www.localline.co/blog/farm-grants-in-canada",
       "last_verified": "2026-07-06",
-      "flag": "Secondary-source only -- confirm against Credit Unions of Alberta primary source."
+      "flag": "Secondary-source only -- confirm against Credit Unions of Alberta primary source.",
+      "confidence_tier": "flagged",
+      "last_crawled": "2026-07-09T23:02:29+00:00",
+      "last_human_verified": "2026-07-06",
+      "change_log": []
     },
     {
       "id": "alberta-farm-fuel-benefit",
@@ -308,9 +397,15 @@
       },
       "intake": "Ongoing program, not project-based",
       "deadline": "N/A -- ongoing",
-      "required_documents": ["Farm Fuel Benefit registration"],
+      "required_documents": [
+        "Farm Fuel Benefit registration"
+      ],
       "source_url": "https://www.alberta.ca",
-      "last_verified": "2026-07-06"
+      "last_verified": "2026-07-06",
+      "confidence_tier": "verified",
+      "last_crawled": "2026-07-09T23:02:29+00:00",
+      "last_human_verified": "2026-07-06",
+      "change_log": []
     }
   ]
 }

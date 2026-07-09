@@ -178,9 +178,16 @@ function Questionnaire({ answers, setAnswers, onSubmit, loading, error }) {
   );
 }
 
+const CONFIDENCE_META = {
+  verified: { label: "✓ Verified", className: "conf-verified" },
+  crawler_confirmed: { label: "Crawler-confirmed", className: "conf-crawler" },
+  flagged: { label: "Flagged — needs review", className: "conf-flagged" },
+};
+
 function ProgramCard({ match, tierKey }) {
   const [blurb, setBlurb] = useState(match.blurb);
   const meta = TIER_META[tierKey];
+  const conf = match.confidence_tier ? CONFIDENCE_META[match.confidence_tier] : null;
   return (
     <article className={`card ${meta.className}`}>
       <header>
@@ -195,9 +202,19 @@ function ProgramCard({ match, tierKey }) {
         </div>
         <div className="badges">
           <span className={`badge ${meta.className}`}>{meta.badge}</span>
+          {conf && <span className={`badge ${conf.className}`}>{conf.label}</span>}
           {match.flag && <span className="badge badge-flag">⚠ Verify before applying</span>}
         </div>
       </header>
+
+      {tierKey === "enrollment_deadline" && match.confidence_tier &&
+        match.confidence_tier !== "verified" && (
+          <div className="conf-warning">
+            <strong>Deadline not human-verified recently.</strong> Missing this
+            deadline costs a full program year — confirm it at the official
+            source before relying on it.
+          </div>
+        )}
 
       {match.flag && (
         <div className="flag-box">
@@ -253,7 +270,10 @@ function ProgramCard({ match, tierKey }) {
         <a href={match.source_url} target="_blank" rel="noreferrer">
           Source: {match.source_url}
         </a>
-        <span>Last verified: {match.last_verified}</span>
+        <span>
+          Last human-verified: {match.last_human_verified || match.last_verified}
+          {match.last_crawled && ` · Last crawled: ${match.last_crawled}`}
+        </span>
       </footer>
     </article>
   );

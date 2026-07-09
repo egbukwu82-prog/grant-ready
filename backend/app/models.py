@@ -41,6 +41,12 @@ class ProgramMatch(BaseModel):
     source_url: str
     last_verified: str
     flag: Optional[str] = None
+    # Crawler confidence-tier fields — None until the first crawl run.
+    # Distinct from `flag`: a program can be un-flagged but still only
+    # crawler_confirmed rather than verified.
+    confidence_tier: Optional[str] = None  # "verified" | "crawler_confirmed" | "flagged"
+    last_crawled: Optional[str] = None
+    last_human_verified: Optional[str] = None
     relevance_score: float
     blurb: str
     blurb_source: str  # "template" | "llm"

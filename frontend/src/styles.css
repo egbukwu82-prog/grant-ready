@@ -241,6 +241,34 @@ button:disabled {
   color: #4a4a58;
 }
 
+.badge.conf-verified {
+  background: #dcefdc;
+  color: #24632a;
+  border: 1px solid #9ec9a1;
+}
+
+.badge.conf-crawler {
+  background: #e0eaf3;
+  color: #2c5877;
+  border: 1px solid #a4c2d8;
+}
+
+.badge.conf-flagged {
+  background: #f7ddd8;
+  color: #a03222;
+  border: 1px solid #d99385;
+}
+
+.conf-warning {
+  background: #fbeae7;
+  border: 1px solid #d99385;
+  border-left: 4px solid #a03222;
+  border-radius: 6px;
+  padding: 10px 12px;
+  margin: 12px 0;
+  font-size: 0.9rem;
+}
+
 .badge-flag {
   background: #fff0c2;
   color: #7a5a00;
