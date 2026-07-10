@@ -1,11 +1,9 @@
 {
   "dataset_meta": {
-    "purpose": "Seed data for GrantReady RAG matching engine",
+    "purpose": "Seed data for GrantReady Phase 1 RAG matching engine",
     "compiled_date": "2026-07-06",
-    "updated_date": "2026-07-09",
-    "update_note": "Second verification pass. Two corrections from the first compile: (1) removed 'Alberta Indigenous Agricultural Funding' -- it was not a real standalone program, the $150K/$300K figures were RALP's own Indigenous-applicant tier, mistakenly split into a separate entry. (2) replaced 'Alberta Young Farmer Grants' ($75,000 grant, single-sourced from a secondary blog with no primary confirmation found) with AFSC's real Next Generation Loan program -- a loan with a preferential interest rate, not a non-repayable grant. Four other entries had generic/imprecise source_urls corrected to specific program pages, and Women in Ag Grant moved from secondary-source-only to fully verified against a primary source.",
-    "note": "All figures verified against official Alberta.ca / AFSC / RDAR sources. Programs change frequently -- treat 'last_verified' as a freshness field the crawler should overwrite, not a permanent value.",
-    "programs_count": 12
+    "note": "All figures verified against official Alberta.ca / AAFC / AFSC / RDAR sources as of compile date. Programs change frequently -- treat 'last_verified' as a freshness field the crawler should overwrite, not a permanent value. Flagged items require live re-verification before showing hard deadlines to farmers.",
+    "programs_count": 13
   },
   "programs": [
     {
@@ -13,7 +11,7 @@
       "name": "On-Farm Efficiency Program",
       "acronym": "OFEP",
       "tier": "provincial",
-      "agency": "Government of Alberta (Sustainable CAP)",
+      "agency": "Government of Alberta (delivered under Sustainable CAP)",
       "type": "cost-share grant, reimbursement-based",
       "funding_amount": {
         "max_per_applicant": 150000,
@@ -28,8 +26,8 @@
         "requires_efp": true,
         "applicant_type": "Primary producer responsible for day-to-day operation"
       },
-      "intake": "Closed to applications until 2026 -- verify current status live",
-      "deadline": "No fixed deadline when open; expenses before April 1, 2023 ineligible",
+      "intake": "Continuous, case-by-case review; limited funding pool -- not guaranteed",
+      "deadline": "No fixed deadline; expenses before April 1, 2023 ineligible",
       "required_documents": [
         "Environmental Farm Plan (EFP) certificate",
         "Application form",
@@ -37,11 +35,19 @@
         "Proof of payment"
       ],
       "source_url": "https://www.alberta.ca/on-farm-efficiency-program",
-      "last_verified": "2026-07-09",
+      "last_verified": "2026-07-06",
       "confidence_tier": "verified",
-      "last_crawled": "2026-07-10T16:55:38+00:00",
-      "last_human_verified": "2026-07-09",
-      "change_log": []
+      "last_crawled": "2026-07-09T23:02:25+00:00",
+      "last_human_verified": "2026-07-06",
+      "change_log": [
+        {
+          "timestamp": "2026-07-09T23:01:26+00:00",
+          "field": "page_content",
+          "old_value": "content hash deadbeef_simulat",
+          "new_value": "content hash b6fae8de076a46c2 — content changed, review manually",
+          "status": "rejected"
+        }
+      ]
     },
     {
       "id": "ofcaf",
@@ -66,8 +72,7 @@
         "applicant_type": "Active producer -- proprietorship, corporation, or registered partnership; landlords with land-only interest are ineligible"
       },
       "intake": "First-come, first-served until funding committed",
-      "deadline": null,
-      "flag": "Conflicting status found -- RDAR's own funding-opportunities index has listed OFCAF as 'Closed' while other bulletins describe it as open with an updated cap. VERIFY LIVE at rdar.ca before showing this as open to a farmer.",
+      "deadline": "FLAG: conflicting status found -- RDAR's own funding-opportunities index currently lists OFCAF as 'Closed', while an April 17, 2026 industry bulletin states it is open with the updated cap. VERIFY LIVE at rdar.ca before showing this as open to a farmer.",
       "required_documents": [
         "BMP Action Plan (PAg/CCA-approved)",
         "Labelled field boundary maps",
@@ -77,7 +82,7 @@
       "source_url": "https://rdar.ca/funding-opportunities/ofcaf",
       "last_verified": "2026-07-06",
       "confidence_tier": "flagged",
-      "last_crawled": "2026-07-10T16:55:46+00:00",
+      "last_crawled": "2026-07-09T23:02:26+00:00",
       "last_human_verified": "2026-07-06",
       "change_log": []
     },
@@ -101,7 +106,7 @@
         "applicant_type": "Individual, corporation, partnership, or co-operative adding value past harvest or slaughter",
         "excludes": "Landlords whose only interest is land ownership"
       },
-      "intake": "Once per program fiscal year (April 1 - March 31); accepting applications until funding allocated",
+      "intake": "Once per program fiscal year (April 1 - March 31)",
       "deadline": "Submit within 90 calendar days of project start date",
       "required_documents": [
         "Application form (original wet signature required)",
@@ -110,7 +115,7 @@
       "source_url": "https://www.alberta.ca/on-farm-value-added-program",
       "last_verified": "2026-07-06",
       "confidence_tier": "verified",
-      "last_crawled": "2026-07-10T16:55:47+00:00",
+      "last_crawled": "2026-07-09T23:02:27+00:00",
       "last_human_verified": "2026-07-06",
       "change_log": []
     },
@@ -141,7 +146,7 @@
       "source_url": "https://afsc.ca/income-stabilization/agristability/new-to-agristability/",
       "last_verified": "2026-07-06",
       "confidence_tier": "verified",
-      "last_crawled": "2026-07-10T16:55:47+00:00",
+      "last_crawled": "2026-07-09T23:02:27+00:00",
       "last_human_verified": "2026-07-06",
       "change_log": []
     },
@@ -162,25 +167,16 @@
         "applicant_type": "Active Canadian producers filing farm income for tax purposes"
       },
       "intake": "Tied to annual tax filing, no separate application",
-      "deadline": "June 30 of the year following the program year, without penalty; late submissions accepted up to 3 months later with a 5%/month reduction to the maximum matchable deposit",
+      "deadline": "Aligned with AgriStability/tax filing deadlines (June 30 initial, penalty deadlines follow)",
       "required_documents": [
-        "Alberta Statement A (marked 'AgriInvest Only')",
         "CRA tax filing"
       ],
-      "source_url": "https://afsc.ca/income-stabilization/afsc-agriinvest/",
-      "last_verified": "2026-07-09",
+      "source_url": "https://afsc.ca",
+      "last_verified": "2026-07-06",
       "confidence_tier": "verified",
-      "last_crawled": "2026-07-10T16:55:47+00:00",
-      "last_human_verified": "2026-07-09",
-      "change_log": [
-        {
-          "timestamp": "2026-07-10T16:23:26+00:00",
-          "field": "page_content",
-          "old_value": "content hash 5f4a2c4f0820e35e",
-          "new_value": "content hash 99066daa6f3637b7 — content changed, review manually",
-          "status": "pending_review"
-        }
-      ]
+      "last_crawled": "2026-07-09T23:02:27+00:00",
+      "last_human_verified": "2026-07-06",
+      "change_log": []
     },
     {
       "id": "emerging-opportunities",
@@ -210,7 +206,7 @@
       "source_url": "https://www.alberta.ca/emerging-opportunities-program",
       "last_verified": "2026-07-06",
       "confidence_tier": "flagged",
-      "last_crawled": "2026-07-10T16:55:47+00:00",
+      "last_crawled": "2026-07-09T23:02:28+00:00",
       "last_human_verified": "2026-07-06",
       "change_log": []
     },
@@ -222,29 +218,24 @@
       "agency": "Government of Alberta / RDAR",
       "type": "per-acre payment",
       "funding_amount": {
-        "structure": "Per-acre payment over a 3-year term, paid in two installments (50% on Land Use Agreement execution, 50% at term end)",
-        "max_primary_producer": 150000,
-        "max_indigenous_or_group": 300000,
-        "max_indigenous_note": "The $300,000 tier applies to Grazing Reserve Associations, Community Pasture operators, and approved Indigenous applicants -- this is the program's own higher tier, not a separate program.",
-        "min_payment": 2000
+        "structure": "Per-acre payment over a 3-year term"
       },
       "eligible_use": "Beneficial Management Practices that maximize Ecological Goods & Services -- carbon sequestration, climate resilience",
       "eligibility": {
         "min_annual_farm_commodities": 25000,
         "requires_efp": true,
-        "location": "Alberta",
-        "applicant_type": "Primary producer, Grazing Reserve Association, Community Pasture operator, or approved Indigenous applicant"
+        "location": "Alberta"
       },
-      "intake": "Continuous within each year's intake period; has closed in the past due to demand -- verify current status live",
-      "deadline": "Verify live -- historically Feb 1 to Nov 30 intake window",
+      "intake": "Check current intake window -- varies",
+      "deadline": "Verify live -- not confirmed in this pass",
       "required_documents": [
         "Environmental Farm Plan"
       ],
       "source_url": "https://www.alberta.ca/resilient-agricultural-landscape-program",
-      "last_verified": "2026-07-09",
+      "last_verified": "2026-07-06",
       "confidence_tier": "verified",
-      "last_crawled": "2026-07-10T16:55:48+00:00",
-      "last_human_verified": "2026-07-09",
+      "last_crawled": "2026-07-09T23:02:28+00:00",
+      "last_human_verified": "2026-07-06",
       "change_log": []
     },
     {
@@ -255,9 +246,7 @@
       "agency": "Government of Alberta (Sustainable CAP)",
       "type": "cost-share grant",
       "funding_amount": {
-        "on_farm_irrigation_max": "$35,000 per fiscal year, 50% grant / 50% applicant",
-        "on_farm_water_supply_max": "$40,000 per applicant over the program term (April 1, 2023 - March 31, 2028)",
-        "on_farm_water_supply_cost_share": "Standard incentive projects (wells, dugouts, dams, spring developments): 25% grant / 75% applicant, typically capped around $7,500 per water source development. Special incentives (well decommissioning, well pit conversion): 50% grant / 50% applicant. Check the current Funding List for exact sub-caps by project type."
+        "note": "Grant maximums adjusted upward in 2024 update to offset rising project costs -- verify current cap live"
       },
       "eligible_use": "On-farm irrigation systems, water supply infrastructure (dugouts, dams, spring developments)",
       "eligibility": {
@@ -265,18 +254,17 @@
         "location": "Alberta",
         "special_requirement": "Dugouts/dams/spring developments require prior consultation with an Agriculture and Irrigation Water Specialist and an approved Construction Sheet"
       },
-      "intake": "Two streams, can apply to one or both; limited funding, case-by-case",
-      "deadline": "No fixed deadline; expenses before April 1, 2023 ineligible",
+      "intake": "Two streams, can apply to one or both",
+      "deadline": "Verify live",
       "required_documents": [
         "Approved Construction Sheet (for water supply stream)",
-        "Application form",
-        "Proof of 10% down payment (irrigation stream)"
+        "Application form"
       ],
       "source_url": "https://www.alberta.ca/water-program",
-      "last_verified": "2026-07-09",
+      "last_verified": "2026-07-06",
       "confidence_tier": "verified",
-      "last_crawled": "2026-07-10T16:55:48+00:00",
-      "last_human_verified": "2026-07-09",
+      "last_crawled": "2026-07-09T23:02:28+00:00",
+      "last_human_verified": "2026-07-06",
       "change_log": []
     },
     {
@@ -287,60 +275,81 @@
       "agency": "Government of Alberta (Sustainable CAP)",
       "type": "cost-share grant",
       "funding_amount": {
-        "max_per_applicant": 4000000,
-        "max_per_fiscal_year": 2000000,
-        "cost_share_rate": "50% grant / 50% applicant",
-        "program_term": "2025-2028"
+        "note": "Supports growth of controlled environment agriculture (CEA) -- verify current cap live"
       },
-      "eligible_use": "Controlled environment agriculture / greenhouse and vertical farm construction or productivity improvements, year-round food production",
+      "eligible_use": "Controlled environment agriculture / greenhouse production and infrastructure to increase local access to fruits and vegetables year-round",
       "eligibility": {
         "location": "Alberta",
-        "applicant_type": "Alberta-registered greenhouse or vertical farm operator (individual, corporation, partnership, co-op)",
-        "min_funding_request": 125000
+        "applicant_type": "CEA producers/operations"
       },
-      "flag": "SCALE NOTE: this program requires a minimum funding request of $125,000 (i.e. a project of roughly $250,000+ given the 50/50 cost share). Similar scale tier to Emerging Opportunities -- likely a poor match for a typical small primary producer and should be weighted toward larger CEA operators in matching.",
-      "intake": "Rolling, first-come first-served until the $10M program budget is fully allocated",
-      "deadline": "No fixed deadline; expenses before January 1, 2025 ineligible",
+      "intake": "Verify live",
+      "deadline": "Verify live",
       "required_documents": [
-        "Application form (original wet signature required)",
-        "Supporting documents per Funding List"
+        "Application form -- verify list live"
       ],
       "source_url": "https://www.alberta.ca/growing-greenhouses-program",
-      "last_verified": "2026-07-09",
-      "confidence_tier": "flagged",
-      "last_crawled": "2026-07-10T16:55:53+00:00",
-      "last_human_verified": "2026-07-09",
+      "last_verified": "2026-07-06",
+      "confidence_tier": "verified",
+      "last_crawled": "2026-07-09T23:02:28+00:00",
+      "last_human_verified": "2026-07-06",
       "change_log": []
     },
     {
-      "id": "next-generation-loan",
-      "name": "Next Generation Loan",
+      "id": "alberta-indigenous-ag-funding",
+      "name": "Alberta Indigenous Agricultural Funding",
       "acronym": null,
       "tier": "provincial",
-      "agency": "AFSC",
-      "type": "loan -- repayable financing with a preferential interest rate, NOT a non-repayable grant",
+      "agency": "Government of Alberta",
+      "type": "cost-share / non-repayable grant",
       "funding_amount": {
-        "structure": "Fixed-rate term loan; eligible borrowers under 40 get a 1% interest rate reduction for the first 5-year term on up to $1,500,000 in lifetime principal",
-        "terms": "Up to 20-year term, maximum 35-year amortization"
+        "min": 2000,
+        "max_primary_producer": 150000,
+        "max_community_project": 300000
       },
-      "eligible_use": "Establishing or expanding a farming operation -- land, equipment, and other capital assets",
+      "eligible_use": "Range of agricultural projects; multi-year support possible",
       "eligibility": {
-        "applicant_type": "New, young (under 40), or returning agricultural producers; over-40 applicants may qualify if farm income was under $10,000 for 3 of the last 5 years",
-        "location": "Alberta",
-        "ownership_requirement": "20% Next Generation borrower ownership required for joint/corporate applications"
+        "min_annual_farm_commodities": 25000,
+        "requires_efp": true,
+        "applicant_type": "Indigenous producers, organizations, and grazing associations"
       },
-      "intake": "Ongoing, apply directly through AFSC",
-      "deadline": "N/A -- ongoing lending program",
+      "intake": "Verify live",
+      "deadline": "Verify live",
       "required_documents": [
-        "AFSC loan application",
-        "Financial and business plan documentation per standard AFSC lending requirements"
+        "Environmental Farm Plan"
       ],
-      "source_url": "https://afsc.ca/lending/next-generation-loan/",
-      "last_verified": "2026-07-09",
-      "correction_note": "This entry replaces a previous 'Alberta Young Farmer Grants' entry describing a $75,000 non-repayable grant. That figure could not be verified against any primary source and appears to have been inaccurate -- this is the real program serving the same audience, correctly characterized as a loan.",
+      "source_url": "https://www.alberta.ca",
+      "last_verified": "2026-07-06",
       "confidence_tier": "verified",
-      "last_crawled": "2026-07-10T16:56:02+00:00",
-      "last_human_verified": "2026-07-09",
+      "last_crawled": "2026-07-09T23:02:28+00:00",
+      "last_human_verified": "2026-07-06",
+      "change_log": []
+    },
+    {
+      "id": "alberta-young-farmer-grants",
+      "name": "Alberta Young Farmer Grants",
+      "acronym": null,
+      "tier": "provincial",
+      "agency": "Government of Alberta / partner delivery",
+      "type": "grant",
+      "funding_amount": {
+        "max": 75000
+      },
+      "eligible_use": "Farm business plan development and implementation for new/young entrants",
+      "eligibility": {
+        "applicant_type": "Under 40 or new entrants with a qualifying farm business plan",
+        "location": "Alberta"
+      },
+      "intake": "Verify live -- source did not confirm intake mechanics",
+      "deadline": "Verify live",
+      "required_documents": [
+        "Farm business plan"
+      ],
+      "source_url": "https://www.localline.co/blog/farm-grants-in-canada",
+      "last_verified": "2026-07-06",
+      "flag": "Secondary-source only -- confirm details against an Alberta.ca or AFSC primary source before publishing to users.",
+      "confidence_tier": "flagged",
+      "last_crawled": "2026-07-09T23:02:28+00:00",
+      "last_human_verified": "2026-07-06",
       "change_log": []
     },
     {
@@ -348,66 +357,55 @@
       "name": "Women in Ag Grant",
       "acronym": null,
       "tier": "provincial (private/credit union sponsored)",
-      "agency": "Credit Unions of Alberta, in partnership with connectFirst Credit Union",
+      "agency": "Credit Unions of Alberta",
       "type": "grant",
       "funding_amount": {
         "amount_each": 10000,
         "number_awarded_annually": 2
       },
-      "eligible_use": "General support for Alberta-based women currently working in, or planning to work in, agriculture",
+      "eligible_use": "General support for women working in Alberta agriculture",
       "eligibility": {
-        "applicant_type": "Alberta-based women, currently or planning to work in agriculture"
+        "applicant_type": "Women, legal residents of Alberta, age 18+, working or planning to work in agriculture"
       },
-      "intake": "Annual award cycle, historically opening mid-June with a roughly 2-3 week application window (or until 150 applications received) -- verify current year's exact dates live",
-      "deadline": "Verify live for current year",
+      "intake": "Annual award cycle",
+      "deadline": "Verify live",
       "required_documents": [
-        "Application via albertacreditunions.com",
-        "Written response on issues facing women in agriculture and how applicant's business supports the industry's future"
+        "Application per Credit Unions of Alberta"
       ],
-      "source_url": "https://albertacreditunions.com/grants/women-in-ag-grant-2025/",
-      "last_verified": "2026-07-09",
+      "source_url": "https://www.localline.co/blog/farm-grants-in-canada",
+      "last_verified": "2026-07-06",
+      "flag": "Secondary-source only -- confirm against Credit Unions of Alberta primary source.",
       "confidence_tier": "flagged",
-      "last_crawled": "2026-07-10T16:56:02+00:00",
-      "last_human_verified": "2026-07-09",
+      "last_crawled": "2026-07-09T23:02:29+00:00",
+      "last_human_verified": "2026-07-06",
       "change_log": []
     },
     {
       "id": "alberta-farm-fuel-benefit",
       "name": "Alberta Farm Fuel Benefit",
-      "acronym": "AFFB",
+      "acronym": null,
       "tier": "provincial",
-      "agency": "Government of Alberta (Agriculture and Irrigation)",
-      "type": "fuel tax exemption program",
+      "agency": "Government of Alberta",
+      "type": "fuel tax rebate program",
       "funding_amount": {
-        "rate": "9-cent-per-litre provincial fuel tax exemption on dyed gasoline and diesel; full exemption on propane and aviation fuel used for farming"
+        "note": "Marked-fuel/tax-benefit structure rather than a project grant -- verify current rate and mechanics live"
       },
-      "eligible_use": "Reduced-cost marked fuel for eligible farm use",
+      "eligible_use": "Reduced-cost fuel for eligible farm use",
       "eligibility": {
-        "min_annual_farm_commodities": 10000,
-        "min_annual_farm_commodities_note": "$5,000-$9,999 acceptable if the only other significant income sources are CPP or OAS",
-        "applicant_type": "Actively and directly farming, responsible for management decisions and operating costs",
+        "applicant_type": "Registered Alberta farm operations",
         "location": "Alberta"
       },
-      "intake": "Continuous -- apply any time for a registration number; periodic renewal required",
-      "deadline": "N/A -- ongoing, though renewal forms may carry their own deadlines",
+      "intake": "Ongoing program, not project-based",
+      "deadline": "N/A -- ongoing",
       "required_documents": [
-        "AFFB registration application",
-        "Proof of farming operation"
+        "Farm Fuel Benefit registration"
       ],
-      "source_url": "https://www.alberta.ca/farm-fuel-and-rural-utility-programs",
-      "last_verified": "2026-07-09",
+      "source_url": "https://www.alberta.ca",
+      "last_verified": "2026-07-06",
       "confidence_tier": "verified",
-      "last_crawled": "2026-07-10T16:56:02+00:00",
-      "last_human_verified": "2026-07-09",
-      "change_log": [
-        {
-          "timestamp": "2026-07-10T16:23:38+00:00",
-          "field": "page_content",
-          "old_value": "content hash 4bdba1b9be2817ac",
-          "new_value": "content hash 7dc736042a5274f0 — content changed, review manually",
-          "status": "pending_review"
-        }
-      ]
+      "last_crawled": "2026-07-09T23:02:29+00:00",
+      "last_human_verified": "2026-07-06",
+      "change_log": []
     }
   ]
 }
