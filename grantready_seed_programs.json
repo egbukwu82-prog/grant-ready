@@ -38,10 +38,25 @@
       ],
       "source_url": "https://www.alberta.ca/on-farm-efficiency-program",
       "last_verified": "2026-07-09",
-      "confidence_tier": "verified",
-      "last_crawled": "2026-07-10T16:55:38+00:00",
+      "confidence_tier": "flagged",
+      "last_crawled": "2026-07-12T18:21:07+00:00",
       "last_human_verified": "2026-07-09",
-      "change_log": []
+      "change_log": [
+        {
+          "timestamp": "2026-07-12T18:15:55+00:00",
+          "field": "intake",
+          "old_value": "Closed to applications until 2026 -- verify current status live",
+          "new_value": "currently closed to new applications and is not anticipated to reopen before September 2026",
+          "status": "pending_review"
+        },
+        {
+          "timestamp": "2026-07-12T18:21:07+00:00",
+          "field": "intake",
+          "old_value": "Closed to applications until 2026 -- verify current status live",
+          "new_value": "Currently closed to new applications and is not anticipated to reopen before September 2026",
+          "status": "pending_review"
+        }
+      ]
     },
     {
       "id": "ofcaf",
@@ -77,9 +92,31 @@
       "source_url": "https://rdar.ca/funding-opportunities/ofcaf",
       "last_verified": "2026-07-06",
       "confidence_tier": "flagged",
-      "last_crawled": "2026-07-10T16:55:46+00:00",
+      "last_crawled": "2026-07-12T18:21:16+00:00",
       "last_human_verified": "2026-07-06",
-      "change_log": []
+      "change_log": [
+        {
+          "timestamp": "2026-07-12T18:16:02+00:00",
+          "field": "intake",
+          "old_value": "First-come, first-served until funding committed",
+          "new_value": "Intake Paused - Due to unprecedented demand, RDAR has now paused the intake of 2026 OFCAF applications until September",
+          "status": "pending_review"
+        },
+        {
+          "timestamp": "2026-07-12T18:16:02+00:00",
+          "field": "min_project_cost",
+          "old_value": "2500",
+          "new_value": "$10,000 minimum eligible project cost",
+          "status": "pending_review"
+        },
+        {
+          "timestamp": "2026-07-12T18:21:16+00:00",
+          "field": "intake",
+          "old_value": "First-come, first-served until funding committed",
+          "new_value": "Intake of 2026 OFCAF applications paused until September",
+          "status": "pending_review"
+        }
+      ]
     },
     {
       "id": "on-farm-value-added",
@@ -110,7 +147,7 @@
       "source_url": "https://www.alberta.ca/on-farm-value-added-program",
       "last_verified": "2026-07-06",
       "confidence_tier": "verified",
-      "last_crawled": "2026-07-10T16:55:47+00:00",
+      "last_crawled": "2026-07-12T18:21:22+00:00",
       "last_human_verified": "2026-07-06",
       "change_log": []
     },
@@ -140,10 +177,18 @@
       ],
       "source_url": "https://afsc.ca/income-stabilization/agristability/new-to-agristability/",
       "last_verified": "2026-07-06",
-      "confidence_tier": "verified",
-      "last_crawled": "2026-07-10T16:55:47+00:00",
+      "confidence_tier": "flagged",
+      "last_crawled": "2026-07-12T18:21:27+00:00",
       "last_human_verified": "2026-07-06",
-      "change_log": []
+      "change_log": [
+        {
+          "timestamp": "2026-07-12T18:21:27+00:00",
+          "field": "fee payment deadline (without penalty)",
+          "old_value": "Fee payment due by July 31 without penalty",
+          "new_value": "Producers have until April 30 or 30 days after receiving their enrolment notice, to pay their fee without penalty",
+          "status": "pending_review"
+        }
+      ]
     },
     {
       "id": "agriinvest",
@@ -170,7 +215,7 @@
       "source_url": "https://afsc.ca/income-stabilization/afsc-agriinvest/",
       "last_verified": "2026-07-09",
       "confidence_tier": "verified",
-      "last_crawled": "2026-07-10T16:55:47+00:00",
+      "last_crawled": "2026-07-12T18:21:31+00:00",
       "last_human_verified": "2026-07-09",
       "change_log": [
         {
@@ -210,7 +255,7 @@
       "source_url": "https://www.alberta.ca/emerging-opportunities-program",
       "last_verified": "2026-07-06",
       "confidence_tier": "flagged",
-      "last_crawled": "2026-07-10T16:55:47+00:00",
+      "last_crawled": "2026-07-12T18:21:35+00:00",
       "last_human_verified": "2026-07-06",
       "change_log": []
     },
@@ -242,10 +287,18 @@
       ],
       "source_url": "https://www.alberta.ca/resilient-agricultural-landscape-program",
       "last_verified": "2026-07-09",
-      "confidence_tier": "verified",
-      "last_crawled": "2026-07-10T16:55:48+00:00",
+      "confidence_tier": "flagged",
+      "last_crawled": "2026-07-12T18:21:39+00:00",
       "last_human_verified": "2026-07-09",
-      "change_log": []
+      "change_log": [
+        {
+          "timestamp": "2026-07-12T18:16:32+00:00",
+          "field": "intake",
+          "old_value": "Continuous within each year's intake period; has closed in the past due to demand -- verify current status live",
+          "new_value": "Due to significant interest, the Resilient Agricultural Landscape Program (RALP) is now closed to applications.",
+          "status": "pending_review"
+        }
+      ]
     },
     {
       "id": "water-program",
@@ -274,10 +327,25 @@
       ],
       "source_url": "https://www.alberta.ca/water-program",
       "last_verified": "2026-07-09",
-      "confidence_tier": "verified",
-      "last_crawled": "2026-07-10T16:55:48+00:00",
+      "confidence_tier": "flagged",
+      "last_crawled": "2026-07-12T18:21:43+00:00",
       "last_human_verified": "2026-07-09",
-      "change_log": []
+      "change_log": [
+        {
+          "timestamp": "2026-07-12T18:16:36+00:00",
+          "field": "on_farm_water_supply_cost_share",
+          "old_value": "Standard incentive projects (wells, dugouts, dams, spring developments): 25% grant / 75% applicant, typically capped around $7,500 per water source development. Special incentives (well decommissioning, well pit conversion): 50% grant / 50% applicant.",
+          "new_value": "Standard incentive projects: up to 50% for eligible expenses; Special incentives (project specific) – varied",
+          "status": "pending_review"
+        },
+        {
+          "timestamp": "2026-07-12T18:21:43+00:00",
+          "field": "on_farm_water_supply_cost_share",
+          "old_value": "Standard incentive projects (wells, dugouts, dams, spring developments): 25% grant / 75% applicant",
+          "new_value": "Standard incentive projects: up to 50% for eligible expenses",
+          "status": "pending_review"
+        }
+      ]
     },
     {
       "id": "growing-greenhouses",
@@ -308,9 +376,24 @@
       "source_url": "https://www.alberta.ca/growing-greenhouses-program",
       "last_verified": "2026-07-09",
       "confidence_tier": "flagged",
-      "last_crawled": "2026-07-10T16:55:53+00:00",
+      "last_crawled": "2026-07-12T18:21:49+00:00",
       "last_human_verified": "2026-07-09",
-      "change_log": []
+      "change_log": [
+        {
+          "timestamp": "2026-07-12T18:16:43+00:00",
+          "field": "intake",
+          "old_value": "Rolling, first-come first-served until the $10M program budget is fully allocated",
+          "new_value": "Program is now closed to applications due to significant interest",
+          "status": "pending_review"
+        },
+        {
+          "timestamp": "2026-07-12T18:21:49+00:00",
+          "field": "intake",
+          "old_value": "Rolling, first-come first-served until the $10M program budget is fully allocated",
+          "new_value": "Now closed to applications due to significant interest",
+          "status": "pending_review"
+        }
+      ]
     },
     {
       "id": "next-generation-loan",
@@ -339,7 +422,7 @@
       "last_verified": "2026-07-09",
       "correction_note": "This entry replaces a previous 'Alberta Young Farmer Grants' entry describing a $75,000 non-repayable grant. That figure could not be verified against any primary source and appears to have been inaccurate -- this is the real program serving the same audience, correctly characterized as a loan.",
       "confidence_tier": "verified",
-      "last_crawled": "2026-07-10T16:56:02+00:00",
+      "last_crawled": "2026-07-12T18:21:54+00:00",
       "last_human_verified": "2026-07-09",
       "change_log": []
     },
@@ -367,7 +450,7 @@
       "source_url": "https://albertacreditunions.com/grants/women-in-ag-grant-2025/",
       "last_verified": "2026-07-09",
       "confidence_tier": "flagged",
-      "last_crawled": "2026-07-10T16:56:02+00:00",
+      "last_crawled": "2026-07-12T18:21:58+00:00",
       "last_human_verified": "2026-07-09",
       "change_log": []
     },
@@ -397,7 +480,7 @@
       "source_url": "https://www.alberta.ca/farm-fuel-and-rural-utility-programs",
       "last_verified": "2026-07-09",
       "confidence_tier": "verified",
-      "last_crawled": "2026-07-10T16:56:02+00:00",
+      "last_crawled": "2026-07-12T18:21:58+00:00",
       "last_human_verified": "2026-07-09",
       "change_log": [
         {
